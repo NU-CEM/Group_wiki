@@ -1,2 +1,5 @@
-# wiki
-Guide, tips, tricks
+# Group Wiki
+
+[Getting Started]()
+[Computers]()
+[Software tools]()
