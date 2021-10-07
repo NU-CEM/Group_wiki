@@ -3,5 +3,6 @@
 - [Philosophy]()
 - [Getting Started]()
 - [Computers]()
-- [Software tools]()
+- [Writing software]()
 - [Giving talks]()
+- [Writing publications]()
