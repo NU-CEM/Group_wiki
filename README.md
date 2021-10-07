@@ -7,5 +7,5 @@
 - [Getting Started]()
 - [Computers](./Computers.md)
 - [Writing software](./writing_software.md)
-- [Giving talks]()
+- [Giving talks](./giving_talks.md)
 - [Writing publications]()
