@@ -1,4 +1,7 @@
 # Group Wiki
+### 🚧 Note! This is a work in progress 🚧
+
+(Feel free to edit!)
 
 - [Philosophy](./Philosophy.md)
 - [Getting Started]()
