@@ -4,7 +4,7 @@
 (Feel free to edit!)
 
 - [Philosophy](./Philosophy.md)
-- [Getting Started]()
+- [Getting Started](./getting_started.md)
 - [Computers](./Computers.md)
 - [Writing software](./writing_software.md)
 - [Giving talks](./giving_talks.md)
