@@ -1,5 +1,5 @@
 # Group Wiki
 
-[Getting Started]()
-[Computers]()
-[Software tools]()
+- [Getting Started]()
+- [Computers]()
+- [Software tools]()
