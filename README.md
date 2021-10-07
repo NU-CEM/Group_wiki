@@ -1,6 +1,6 @@
 # Group Wiki
 
-- [Philosophy]()
+- [Philosophy](./Philosophy.md)
 - [Getting Started]()
 - [Computers](./Computers.md)
 - [Writing software]()
