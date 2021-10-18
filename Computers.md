@@ -1,12 +1,14 @@
+
+## Archer2 (national supercomputer)
+
+- Ask Lucy to request access via the [MCC](https://www.ucl.ac.uk/klmc/mcc/)
+
 ## Oswald (Northumbria University supercomputer)
 
 - To access Oswald, raise a ticket with IT (For the attention of Jimmy Gibson or Ben Levien).
 - To access Oswald from home you will also need to request a login on Garrett (again by raising a ticket with IT).
 - The SSH setup is a little finicky, the ssh config files that work for Lucy (stored as `~.ssh/config`) are [here](https://github.com/lucydot/ssh_config/blob/main/config)
 
-## Archer2 (national supercomputer)
-
-- Ask Lucy to request access via the [MCC](https://www.ucl.ac.uk/klmc/mcc/)
 
 ## Dade (group workstation)
 
@@ -16,3 +18,4 @@
 > `sudo /root/bin/add-vasp-user <USERNAME>`
 > Where <USERNAME> the University ID of the user.  You will be prompted for your password.  Users will then login using their University ID and password. 
  
+## Angelina (Lucy's iMac)
