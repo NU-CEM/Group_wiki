@@ -8,4 +8,5 @@
 - [Computers](./Computers.md)
 - [Writing software](./writing_software.md)
 - [Giving talks](./giving_talks.md)
-- [Writing publications]()
+- [Writing publications](./writing_publications.md)
+- [Using Vasp](./using_vasp.md)
