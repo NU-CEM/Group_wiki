@@ -1,0 +1,22 @@
+ISTART = 0   # new job
+
+NSW = 0          # number of ionic steps
+NELMIN = 4       # minimum number of SCF steps
+
+PREC = Accurate  # sets accurate values for other tags
+LREAL = .FALSE.  # projection in reciprocal space (higher precision for energies)
+LWAVE = .FALSE.  # don't print out large OUTCAR
+LCHARG = .FALSE. # don't print out large CHGCAR
+EDIFF = 1.0e-06  # energy convergence for electronic loop
+EDIFFG = -0.02   # force convergence for ionic loop
+ENCUT = 400      # to reduce pulay
+GGA = PS         # PBEsol
+
+ISMEAR = 0       # Gaussian smearing of electronic orbital occupation
+SIGMA = 0.01     # Smearing width
+
+SYSTEM = MAPI
+
+KPAR = 4         # 4 k-points treated in parallel
+NCORE = 28       # the number of compute cores per orbital
+
