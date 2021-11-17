@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH --job-name=336
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=lucywhalley@gmail.com
+#SBATCH --time=48:00:00
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=48
+#SBATCH --cpus-per-task=1
+
+#SBATCH --partition=standard
+#SBATCH --account=e05-power-luc
+#SBATCH --qos=long
+
+#=========================================
+
+module load epcc-job-env
+module load vasp/6
+
+export OMP_NUM_THREADS=1
+
+srun --hint=nomultithread vasp_ncl > vasp.out
