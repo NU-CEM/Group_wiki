@@ -4,6 +4,7 @@
 - Ask Lucy to request access via the [MCC](https://www.ucl.ac.uk/klmc/mcc/)
 - To use Archer2, first register using SAFE: https://safe.epcc.ed.ac.uk/.
 - There is a decent training programme associated with Archer2. There is the Archer2 driving test which outlines how Archer2 works and gives you a small amount of resources to use: https://www.archer2.ac.uk/training/. There are also some more advanced programmes on MPI/OpenMP etc.
+- Note that Archer has three file systems: `/home` (for logging in and keeping scripts/binaries), `/work` (for running jobs) and `/epsrc` (for file storage). Do not try to submit jobs from `/home` - your job will not run here.
 
 ## Oswald (Northumbria University supercomputer)
 
