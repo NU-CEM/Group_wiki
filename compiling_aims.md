@@ -13,7 +13,7 @@
 
 2. Create an empty `build` directory in the top level of the FHI-aims source code and `cd` into it
 
-3. Create the relevant [cmake file](./code/fhi-aim.conda.cmake)
+3. Create the relevant [cmake file](./code/fhi-aims.conda.cmake)
 
 4. cmake -C initial_cache.conda.cmake ..
 
