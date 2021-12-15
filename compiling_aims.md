@@ -22,7 +22,8 @@ Currently there is a problem: `CMake Error: File /home/osw_mynf8/fhi-aims.210716
 ## Approach 2 - modules
 
 1. Load the intel compilers, intel MPI libraries and Intel Maths Kernal Libraries
-```module load intel/compiler/64/16.0.4/2016.4.258
+```
+module load intel/compiler/64/16.0.4/2016.4.258
 module load intel/mpi/64/5.1.3/2016.4.258
 module load intel/mkl/64/11.3.4/2016.4.258
 ```
