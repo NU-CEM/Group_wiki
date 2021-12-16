@@ -11,7 +11,7 @@ set(USE_SCALAPACK ON CACHE BOOL "" FORCE)
 set(USE_LIBXC ON CACHE BOOL "" FORCE)
 set(USE_HDF5 OFF CACHE BOOL "" FORCE)
 set(USE_RLSY ON CACHE BOOL "" FORCE)
-#set(ELPA2_KERNEL "" CACHE STRING "Change to AVX/AVX2/AVX512 if running on Intel processors" FORCE)
+#set(ELPA2_KERNEL AVX2 CACHE STRING "Change to AVX/AVX2/AVX512 if running on Intel processors" FORCE)
 
 # GNU Compilers
 #set(CMAKE_Fortran_COMPILER ftn CACHE STRING "")
