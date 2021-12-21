@@ -12,7 +12,7 @@ module load intel/compiler/64/2017/17.0.6
 module load intel/mpi/64/2017/6.256 
 module load intel/mkl/64/2017/6.256 
 ```
-Note: the 2016 libraries tried in a previous approach (./compling_aims.md) results in a compilation error "src/external/M_strings/M_strings.f90(8087): error #8798: The construct name in the EXIT statement does not match any DO or BLOCK construct to which the EXIT statement belongs."
+Note: the 2016 libraries tried in a previous approach (./compiling_aims.md) results in a compilation error "src/external/M_strings/M_strings.f90(8087): error #8798: The construct name in the EXIT statement does not match any DO or BLOCK construct to which the EXIT statement belongs."
 
 The 2017 libraries work fine but we much check if the latest intel compliers ans libraries can be installed on oswald as well.
 
