@@ -19,6 +19,8 @@
 
 ## Dade (group workstation)
 
+- Specs - **processors**: 2* Intel Xeon 6230 2.1 2933MHz 20C (40 physical cores total), **memory**: 192GB (6x32GB) DDR4 2933 DIMM ECC Registered 2CPU Memory
+
 - To access Dade please ask Lucy to create a user account
 - To access Dade from home please see the notes above.
 
