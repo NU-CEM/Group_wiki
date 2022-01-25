@@ -6,18 +6,23 @@
 - There is a decent training programme associated with Archer2. There is the Archer2 driving test which outlines how Archer2 works and gives you a small amount of resources to use: https://www.archer2.ac.uk/training/. There are also some more advanced programmes on MPI/OpenMP etc.
 - Note that Archer has three file systems: `/home` (for logging in and keeping scripts/binaries), `/work` (for running jobs) and `/epsrc` (for file storage). Do not try to submit jobs from `/home` - your job will not run here.
 
+## Northumbria servers
+
+- To access computers on the Northumbria network (Oswald or Dade) from home you will also need to request a login on Garrett (again by raising a ticket with IT) and ssh in via Garrett. The SSH setup is a little finicky (via a Proxy command) - the ssh config files that work for Lucy (stored as `~.ssh/config`) are [here](https://github.com/lucydot/ssh_config/blob/main/config)
+- Note that to access computers on the Northumbria network (use the Sky Guest Wifi as the NU Simply Web, NU staff does not allow SSH) from campus you do not need to "hop through" the Garrett proxy.
+
 ## Oswald (Northumbria University supercomputer)
 
 - To access Oswald, raise a ticket with IT (For the attention of Jimmy Gibson or Ben Levien).
-- To access Oswald from home you will also need to request a login on Garrett (again by raising a ticket with IT).
-- The SSH setup is a little finicky, the ssh config files that work for Lucy (stored as `~.ssh/config`) are [here](https://github.com/lucydot/ssh_config/blob/main/config)
+- To login from campus use `ssh username@oswald`. To login from home see the notes above.
 - Oswald uses Slurm to handle job submissions; example submission script for vasp is [here](https://github.com/NU-CEM/Group_wiki/blob/main/oswald_submission.slm).
 
 ## Dade (group workstation)
 
+- Specs - **processors**: 2* Intel Xeon 6230 2.1 2933MHz 20C (40 physical cores total), **memory**: 192GB (6x32GB) DDR4 2933 DIMM ECC Registered 2CPU Memory
+
 - To access Dade please ask Lucy to create a user account
-- To access Dade from home you will also need to request a login on Garrett (again by raising a ticket with IT).
-- The SSH setup is a little finicky, the ssh config files that work for Lucy (stored as `~.ssh/config`) are [here](https://github.com/lucydot/ssh_config/blob/main/config)
+- To access Dade from home please see the notes above.
 
 From Jimmy: 
 > I've copied v6.2.1 to your Downloads/VASP directory.  If you can compile and you are satisfied with the testsuite results I will install in the modules environment to make VASP available to other users.
