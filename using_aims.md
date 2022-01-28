@@ -7,7 +7,7 @@
 - Unlike VASP, input keywords/species in the control.in are insentive to ordering from the geometry.in files. The k-grids by default are Gamma-centered. 
 
 ## Phonopy with FHI-aims
-For finite displacement evaluation of the force constant matrix, Phonopy can be interfaced with aims. Personally, I used to like the old integratability with one simple [phonopy-FHI-aims][https://th.fhi-berlin.mpg.de/sitesub/meetings/DFT-workshop-2016/uploads/Meeting/Tutorial_6_2016.pdf] script, but this script is now defunct. The new Phonopy version now has an [aims interface](https://phonopy.github.io/phonopy/interfaces.html) which is triggered by the `--aims` keyword. 
+For finite displacement evaluation of the force constant matrix, Phonopy can be interfaced with aims. Personally, I used to like the old integratability with one simple [phonopy-FHI-aims](https://th.fhi-berlin.mpg.de/sitesub/meetings/DFT-workshop-2016/uploads/Meeting/Tutorial_6_2016.pdf) script, but this script is now defunct. The new Phonopy version now has an [aims interface](https://phonopy.github.io/phonopy/interfaces.html) which is triggered by the `--aims` keyword. 
 
 To perform a simple Phonopy calulation follow these steps, they are also listed by the developers [here](https://github.com/phonopy/phonopy/blob/develop/example/diamond-FHI-aims/README.md)
 
