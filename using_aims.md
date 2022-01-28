@@ -22,7 +22,7 @@ phonopy -d --dim="2 2 2" --aims
 ```
 phonopy -f phonopy-FHI-aims-displacement-{001..120}/outfile
 ```
-Out of habit, I still name my folders like the old script did. The 1st and the last folder need to be listed in this way `{first_folder..last_folder}`. 
+ Out of habit, I still name my folders like the old script did. The 1st and the last folder need to be listed in this way `{first_folder..last_folder}`. 
 4. Plot the phonon band structure!
 ```
 phonopy -p -s band.conf
