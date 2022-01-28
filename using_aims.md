@@ -23,7 +23,7 @@ phonopy -d --dim="2 2 2" --aims
 phonopy -f phonopy-FHI-aims-displacement-{001..120}/outfile
 ```
 4. **Post processing**:
-- Plot the phonon band structure! First create a `band.conf` file which constains phonopy related keywords. To plot a bandstrcture, we need to specify a band path. Its almost become standard practice at this point to follow the convention set by Setyawan [et al.](https://doi.org/10.1016/j.commatsci.2010.05.010).  The high symmetry points sample the irreducible part of the Brillouin zone. `-p` is for plot and `-s` is for save. A sample band.conf is here. Note: Remember to symmetrize your forces by using the `FC_SYMMETRY = .TRUE.` keyword. This ensures translational symmetry and perumtation symmetry is appiled on the force conatant matrix. This fixes tiny imaginary modes seen at the Gamma point. 
+- Plot the phonon band structure! First create a `band.conf` file which constains phonopy related keywords. To plot a bandstrcture, we need to specify a band path. Its almost become standard practice at this point to follow the convention set by Setyawan [et al.](https://doi.org/10.1016/j.commatsci.2010.05.010)  The high symmetry points sample the irreducible part of the Brillouin zone. `-p` is for plot and `-s` is for save. A sample band.conf is here. Note: Remember to symmetrize your forces by using the `FC_SYMMETRY = .TRUE.` keyword. This ensures translational symmetry and permutation symmetry is appiled on the force conatant matrix. This fixes tiny imaginary modes seen at the Gamma point. 
 ```
 phonopy -p -s band.conf
 ```
