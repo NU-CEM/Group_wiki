@@ -1,15 +1,20 @@
 ## FHI-aims: The basics
 
-- There are only two main input files in aims, [geometry.in](./aims_demo/geometry.in) and control.in
+- There are only two main input files in aims, [geometry.in](./aims_demo/geometry.in) and [control.in](./aims_demo/control.in)
 - The geometry.in file is the POSCAR analogue of VASP which contains the lattice parameters and atomic positions in Cartesian space. 
 - The control.in file is the INCAR, KPOINTS and POTCAR combined. The file contains the DFT settings (functional and SCF convergence criteria) and kpoints and the atomic species files. 
 - For production runs, species files are generally "tight" settings and can be internally tightened with the tight tier-1 or tight-deafult and tight tier-2 options. 
 - Unlike VASP, input keywords/species in the control.in are insentive to ordering from the geometry.in files. The k-grids by default are Gamma-centered. 
 
+
+
+In the species_default folder of the aims repo, there are different kinds of basis sets one can choose. These need to be `cat` into the control.in file for every unique atom type. The standard practice for solid state DFT is the default settings/folder(s). There is a are species_default > default_2010 basis sets which are now an outdated version. However these basis sets still produced fantastic agreement with experiment and can still be used for comparison. From now on, I will use species_default > default_2020 which is what the developers also recommend. 
+Inside species_default > default_2020 there are light (generally only for testing), tight (generally used for production runs), very_tight and other folders which to my knowledge I haven't seen in use so far. 
+
 ## Phonopy with FHI-aims
 For finite displacement evaluation of the force constant matrix and other properties related to harmonic approximations, Phonopy with an aims interface can be used. Personally, I used to like the old integratability with one simple [phonopy-FHI-aims](https://th.fhi-berlin.mpg.de/sitesub/meetings/DFT-workshop-2016/uploads/Meeting/Tutorial_6_2016.pdf) script, but this script is now defunct. The new Phonopy version now has an [aims interface](https://phonopy.github.io/phonopy/interfaces.html) which is triggered by the `--aims` keyword. 
 
-To perform a simple Phonopy calulation follow these steps, they are also listed by the developers [here](https://github.com/phonopy/phonopy/blob/develop/example/diamond-FHI-aims/README.md).
+To perform a simple Phonopy calculation follow these steps, they are also listed by the developers [here](https://github.com/phonopy/phonopy/blob/develop/example/diamond-FHI-aims/README.md).
 
 1. Create supercells with displacements. Standard dispplacement step is 0.01 Angstrom:
 ```
