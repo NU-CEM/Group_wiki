@@ -1,0 +1,7 @@
+lattice_vector 0.0 2.0 2.0
+lattice_vector 2.0 0.0 2.0
+lattice_vector 2.0 2.0 0.0
+atom_frac 0.0 0.0 0.0 Si
+
+#This is how you put in comments
+#Note: atom_frac is in lattice vector basis (frcational coordinates). One can also define atom positions in cartesian coordinates by replacing atom_frac with atom
