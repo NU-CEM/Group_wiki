@@ -14,6 +14,8 @@ Inside species_default > default_2020 there are light (generally only for testin
 ## Phonopy with FHI-aims
 For finite displacement evaluation of the force constant matrix and other properties related to harmonic approximations, Phonopy with an aims interface can be used. Personally, I used to like the old integratability with one simple [phonopy-FHI-aims](https://th.fhi-berlin.mpg.de/sitesub/meetings/DFT-workshop-2016/uploads/Meeting/Tutorial_6_2016.pdf) script, but this script is now defunct. The new Phonopy version now has an [aims interface](https://phonopy.github.io/phonopy/interfaces.html) which is triggered by the `--aims` keyword. 
 
+A good resource for VASP with Phonopy and Phono3py is [here](https://www.slideshare.net/jmskelton/phonons-phonopy-pro-tips-2015). 
+
 To perform a simple Phonopy calculation follow these steps, they are also listed by the developers [here](https://github.com/phonopy/phonopy/blob/develop/example/diamond-FHI-aims/README.md).
 
 1. Create supercells with displacements. Standard dispplacement step is 0.01 Angstrom:
