@@ -6,10 +6,12 @@
 - For production runs, species files are generally "tight" settings and can be internally tightened with the tight tier-1 or tight-deafult and tight tier-2 options. 
 - Unlike VASP, input keywords/species in the control.in are insentive to ordering from the geometry.in files. The k-grids by default are Gamma-centered. 
 
-
-
 In the species_default folder of the aims repo, there are different kinds of basis sets one can choose. These need to be `cat` into the control.in file for every unique atom type. The standard practice for solid state DFT is the default settings/folder(s). There is a are species_default > default_2010 basis sets which are now an outdated version. However these basis sets still produced fantastic agreement with experiment and can still be used for comparison. From now on, I will use species_default > default_2020 which is what the developers also recommend. 
 Inside species_default > default_2020 there are light (generally only for testing), tight (generally used for production runs), very_tight and other folders which to my knowledge I haven't seen in use so far. 
+
+## Electronic band structure analysis 
+
+1. Spin-orbit coupling: The keyword `include_spin_orbit non_self_consistent` must be included in the `control.in`. Aims prints both scalar-relativistic values and the spin-orbit-coupled values in band***.out files for each path segement.   
 
 ## Phonopy with FHI-aims
 For finite displacement evaluation of the force constant matrix and other properties related to harmonic approximations, Phonopy with an aims interface can be used. Personally, I used to like the old integratability with one simple [phonopy-FHI-aims](https://th.fhi-berlin.mpg.de/sitesub/meetings/DFT-workshop-2016/uploads/Meeting/Tutorial_6_2016.pdf) script, but this script is now defunct. The new Phonopy version now has an [aims interface](https://phonopy.github.io/phonopy/interfaces.html) which is triggered by the `--aims` keyword. 
