@@ -6,10 +6,11 @@
 - There is a decent training programme associated with Archer2. There is the Archer2 driving test which outlines how Archer2 works and gives you a small amount of resources to use: https://www.archer2.ac.uk/training/. There are also some more advanced programmes on MPI/OpenMP etc.
 - Note that Archer has three file systems: `/home` (for logging in and keeping scripts/binaries), `/work` (for running jobs) and `/epsrc` (for file storage). Do not try to submit jobs from `/home` - your job will not run here.
 
-| Nodes    | 5,860 nodes: 5,276 standard memory, 584 high memory       |
-| Procs    | 2× AMD EPYCTM 7742, 2.25 GHz, 64-core        |
-| Memory   |  256 GiB (standard memory), 512 GiB (high memory)           |
-| Cores per node | 128 (2× 64-core processors) |
+| Nodes    | 5,860 nodes: 5,276 standard memory, 584 high memory|
+|----------|----------------------------------------------------|
+| Procs    | 2× AMD EPYCTM 7742, 2.25 GHz, 64-core|
+| Memory   |  256 GiB (standard memory), 512 GiB (high memory)|
+| Cores per node | 128 (2× 64-core processors)|
 
 More details on hardware can be found [here](https://www.archer2.ac.uk/about/hardware.html)
 ## Northumbria servers
