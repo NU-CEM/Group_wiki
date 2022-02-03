@@ -24,6 +24,12 @@ More details on hardware can be found [here](https://www.archer2.ac.uk/about/har
 - To login from campus use `ssh username@oswald`. To login from home see the notes above.
 - Oswald uses Slurm to handle job submissions; example submission script for vasp is [here](https://github.com/NU-CEM/Group_wiki/blob/main/oswald_submission.slm).
 
+| Nodes    | 32 compute nodes |
+|----------|----------------------------------------------------|
+| Procs    | 2× Intel Xeon E5-2680 v4 14 core 2.4GHz CPU|
+| Memory   | 64 GB RAM, 120 GB SSD|
+| Cores per node | 28 (2x 14-core processors)|
+
 ## Dade (group workstation)
 
 - Specs - **processors**: 2* Intel Xeon 6230 2.1 2933MHz 20C (40 physical cores total), **memory**: 192GB (6x32GB) DDR4 2933 DIMM ECC Registered 2CPU Memory
