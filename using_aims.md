@@ -10,7 +10,7 @@ In the species_default folder of the aims repo, there are different kinds of bas
 Inside species_default > default_2020 there are light (generally only for testing), tight (generally used for production runs), very_tight and other folders which to my knowledge I haven't seen in use so far. 
 
 ## Troubleshooting:
-If the your SCF does not converge, first try
+If the your SCF does not converge or converges slowly, first try
 ```
 sc_init_iter 10
 ```
