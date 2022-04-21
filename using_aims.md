@@ -9,6 +9,12 @@
 In the species_default folder of the aims repo, there are different kinds of basis sets one can choose. These need to be `cat` into the control.in file for every unique atom type. The standard practice for solid state DFT is the default settings/folder(s). There is a are species_default > default_2010 basis sets which are now an outdated version. However these basis sets still produced fantastic agreement with experiment and can still be used for comparison. From now on, I will use species_default > default_2020 which is what the developers also recommend. 
 Inside species_default > default_2020 there are light (generally only for testing), tight (generally used for production runs), very_tight and other folders which to my knowledge I haven't seen in use so far. 
 
+## Troubleshooting:
+If the your SCF does not converge, first try
+```
+sc_init_iter 10
+```
+This restarts the SCF with the unconverged density after the 10th cycle. Helps in converging problems when the k-grid sampling is not very dense. 
 ## Electronic band structure analysis 
 
 1. Spin-orbit coupling: The keyword `include_spin_orbit non_self_consistent` must be included in the `control.in`. Aims prints both scalar-relativistic values and the spin-orbit-coupled values in band***.out files for each path segement.   
