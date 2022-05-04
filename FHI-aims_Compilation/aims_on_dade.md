@@ -10,7 +10,7 @@ The nice thing about having the Intel oneAPI is that all the compilers are alway
 
 2. Create an empty `build` directory in the top level of the FHI-aims source code and `cd` into it
 
-3. Create the relevant [cmake file](./FHI-aims_Compilation/fhi-aims.cmake.dade)
+3. Create the relevant [cmake file](../fhi-aims.cmake.dade)
 
 4. Run the cmake command 
 ``` cmake -C fhi-aims.cmake ..```
