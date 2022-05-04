@@ -18,7 +18,7 @@ The 2017 libraries work fine but we much check if the latest intel compliers ans
 
 3. Create an empty `build` directory in the top level of the FHI-aims source code and `cd` into it
 
-3. Create the relevant [cmake file](./code/fhi-aims.cmake)
+3. Create the relevant [cmake file](../code/fhi-aims.cmake)
 
 4. Run the cmake command 
 ``` cmake -C fhi-aims.cmake ..```
