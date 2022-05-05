@@ -22,4 +22,4 @@ where '40' is the number of cores assigned to compile the code.
 As of 25th Jan 2022, the local version compiled on Dade is the '220115' version whereas on Oswald the version is '211206', but this shouldn't be a cause for alarm. 
 
 
-Similar approach on Archer2 with [this cmake file](../FHI-aims_Compilation/fhi-aims.cmake.dade)
+Similar approach on Archer2 with [this cmake file](../FHI-aims_Compilation/fhi-aims.cmake.archer2)
