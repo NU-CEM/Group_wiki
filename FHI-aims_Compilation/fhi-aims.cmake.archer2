@@ -1,0 +1,10 @@
+# Cray Compilers
+set(CMAKE_Fortran_COMPILER "/opt/cray/pe/craype/2.7.10/bin/ftn" CACHE STRING "")
+set(Fortran_MIN_FLAGS "-O3 -Ounroll2 -Oipa3 -Ovector3 -hfp2" CACHE STRING "")
+set(CMAKE_Fortran_FLAGS "-O3 -hfp3" CACHE STRING "")
+set(CMAKE_C_COMPILER "/opt/cray/pe/craype/2.7.10/bin/cc" CACHE STRING "")
+set(CMAKE_C_FLAGS "-O2 -funroll-loops -ffast-math" CACHE STRING "")
+set(USE_MPI ON CACHE BOOL "" FORCE)
+set(USE_SCALAPACK ON CACHE BOOL "" FORCE)
+set(USE_LIBXC ON CACHE BOOL "" FORCE)
+set(ELPA2_KERNEL "AVX2" CACHE STRING "Change to AVX/AVX2/AVX512 if running on Intel processors" FORCE)
