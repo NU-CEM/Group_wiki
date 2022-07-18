@@ -50,3 +50,4 @@ phonopy -p -s dos.conf
 ```
 phonopy -p -s -t dos.conf > thermal.dat 
 ```
+## Phono3py with aims (line widths and thermal conductivity)
