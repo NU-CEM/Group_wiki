@@ -15,7 +15,7 @@
 
 # Load compilation time environment
 module load cpe/21.09
-
+module swap PrgEnv-cray PrgEnv-gnu
 export LD_LIBRARY_PATH=$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH
 
 # Set the number of threads to 1
@@ -26,5 +26,6 @@ export OMP_NUM_THREADS=1
 # Launch the parallel job
 #   Using 512 MPI processes and 128 MPI processes per node
 #   srun picks up the distribution from the sbatch options
+ulimit -s unlimited
 
-srun --cpu-bind=cores /work/e05/e05/mat92/Codes/Aims/Nov21/aims.210716_2_cray.scalapack.mpi.x > aims_craynov21.out
+srun --cpu-bind=cores /work/e05/e05/shared/wmd_shared/Binaries/Aims/Jun22/Gnu/aims.220609.scalapack.mpi.x > aims.out
