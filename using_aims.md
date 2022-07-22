@@ -48,6 +48,6 @@ phonopy -p -s dos.conf
 ```
 - Plot the thermal properteries which can be evaluated with the  `-t` argument. This is printed out on the terminal, so copy this into the a file. The same info is printed into a thermal.yaml file as well but (at the risk of sounding like a broken record, because of the old script) I like the formatting that is printed on the terminal so I save it in a file (personal preference).  Requires some formatting of the thermal.dat file (deleting the top few lines, no nig deal). 
 ```
-phonopy -p -s -t dos.conf > thermal.dat 
+phonopy -p -s -t mesh.conf > thermal.dat 
 ```
 ## Phono3py with aims (line widths and thermal conductivity)
