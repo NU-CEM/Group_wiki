@@ -6,6 +6,10 @@ git clone https://aims-git.rz-berlin.mpg.de/aims/FHIaims.git
 ```
 This requires an account on aims club and the git clone requires the users password. 
 
+Make sure cmake version is > 3.10. New versions can easily be installed through conda. 
+```
+conda install -c anaconda cmake
+```
 2. Load the intel compilers, intel MPI libraries and Intel Maths Kernal Libraries
 ```
 module load intel/compiler/64/2017/17.0.6 
