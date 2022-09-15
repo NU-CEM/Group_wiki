@@ -14,7 +14,7 @@ If the your SCF does not converge or converges slowly, first try
 ```
 sc_init_iter 10
 ```
-This restarts the SCF with the unconverged density after the 10th cycle. Helps in converging problems when the k-grid sampling is not very dense. 
+This restarts the SCF with the unconverged density after the 10th cycle. Helps in converging problems when the k-grid sampling is not very dense. I have also found that using this helps converge calculations for spin systems where `spin none` is used. 
 ## Electronic band structure analysis 
 
 1. Spin-orbit coupling: The keyword `include_spin_orbit non_self_consistent` must be included in the `control.in`. Aims prints both scalar-relativistic values and the spin-orbit-coupled values in band***.out files for each path segement.   
