@@ -51,3 +51,11 @@ phonopy -p -s dos.conf
 phonopy -p -s -t mesh.conf > thermal.dat 
 ```
 ## Phono3py with aims (line widths and thermal conductivity)
+
+## FHI-vibes 
+
+Setup FHI-vibes in a [virtual enviroment on archer2](https://docs.archer2.ac.uk/user-guide/python/#setting-up-virtual-environments). 
+An initial setup also requires creating of a [~/.vibesrc]() file which contains paths of the FHI-aims binary and a script that [runs FHI-aims](). 
+
+A [submit.slm]() script is prepared which holds the queue codes, sources the vibes virtual enviroment and calls vibes to run a job accordingly. 
+The FHi-vibes tutorial can be found [here](https://gitlab.com/FHI-aims-club/tutorials/phonons-with-fhi-vibes/-/tree/main/Tutorial).
