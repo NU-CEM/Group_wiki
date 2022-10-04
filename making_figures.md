@@ -26,6 +26,6 @@ There are several plotters that can be used for plotting a phonon BS. Unfortunat
 python phonon.py -b band.yaml
 ```
 
-
-
 # Electronic Bandstructure
+
+For electronic bandstructure, [aimstools](https://aims-tools.readthedocs.io/en/master/index.html) is a good option. For quick plotting, [GIMS](https://gims.ms1p.org/static/index.html) is also something I use. Its useful to write bandstrcture paths automatically. 
