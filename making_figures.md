@@ -18,9 +18,9 @@ perov.polyhedra.settings["Zr"].color = [0.5799999833106995, 0.878000020980835, 0
 ```
 On Render select "Attach Render" and on Viewport type: 1.0 0.0 1.0. 
 
-# Phonon Bandstrcture
+# Phonon Bandstructure
 
-There are several plotters that can be used for plotting a phonon BS. Unfortunately, at the moment, most require a VASP + Phonopy setup. There is aimstools which can be used, but it requires a FHI-aims + FHI-vibes + Phonopy setup. I found this [useful script written by Warda Rahim](https://github.com/warda-rahim/phononplotter/blob/master/phonon.py) and modfied it [here]() (very tiny bit). To run:
+There are several plotters that can be used for plotting a phonon BS. Unfortunately, at the moment, most require a VASP + Phonopy setup. There is aimstools which can be used, but it requires a FHI-aims + FHI-vibes + Phonopy setup. I found this [useful script written by Warda Rahim](https://github.com/warda-rahim/phononplotter/blob/master/phonon.py) and modified it [here]() (very tiny bit). It only requires a band.yaml file as an input which removes any dependance of electronic code. To run it :
 
 ```
 python phonon.py -b band.yaml
