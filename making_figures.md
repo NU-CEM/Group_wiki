@@ -3,6 +3,7 @@
 Setup [Blender](https://www.blender.org/), [Beautiful Atoms](https://beautiful-atoms.readthedocs.io/en/latest/index.html) and [ASE](https://wiki.fysik.dtu.dk/ase/index.html). 
 To generate this following image, on the python interactive console type:
 
+NOTE: make sure the geometry is in a conventional unit cell or the polyhedra function does not work. 
 ```
 from ase.io import read
 from batoms import Batoms
