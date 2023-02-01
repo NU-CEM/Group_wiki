@@ -55,7 +55,8 @@ phonopy -p -s -t mesh.conf > thermal.dat
 ## FHI-vibes 
 
 Setup FHI-vibes in a [virtual enviroment on archer2](https://docs.archer2.ac.uk/user-guide/python/#setting-up-virtual-environments). 
-An initial setup also requires creating of a [~/.vibesrc]() file which contains paths of the FHI-aims binary and a script that [runs FHI-aims](). 
+An initial setup also requires creating of a [~/.vibesrc](https://github.com/NU-CEM/Group_wiki/blob/main/aims_demo/vibesrc) file which contains paths of the FHI-aims binary. However, due to the nature of how archer2 is set up, it is easier to copy the contents of vibesrc in the inout files of fhi-vibes such as aims.in and phonopy.in. 
+Here is an examples script that runs FHI-aims on archer2 also required to be an executable by vibes [run_aims.slm](https://github.com/NU-CEM/Group_wiki/blob/main/aims_demo/run_aims.slm). 
 
-A [submit.slm]() script is prepared which holds the queue codes, sources the vibes virtual enviroment and calls vibes to run a job accordingly. 
+A [submit.sh](https://github.com/NU-CEM/Group_wiki/blob/main/aims_demo/submit.sh) script is prepared which holds the queue codes, sources the vibes virtual enviroment and calls vibes to run a job accordingly. 
 The FHi-vibes tutorial can be found [here](https://gitlab.com/FHI-aims-club/tutorials/phonons-with-fhi-vibes/-/tree/main/Tutorial).
