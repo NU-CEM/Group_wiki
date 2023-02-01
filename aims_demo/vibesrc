@@ -1,0 +1,3 @@
+[machine]
+ basissetloc =      /work/e05/e05/prakaya/chalcogenide_perovskites/species_defaults/defaults_2020
+ aims_command =     /work/e05/e05/prakaya/chalcogenide_perovskites/run_aims.sh
