@@ -12,14 +12,11 @@ conda install -c anaconda cmake
 ```
 2. Load the intel compilers, intel MPI libraries and Intel Maths Kernal Libraries
 ```
-module load intel/compiler/64/2017/17.0.6 
-module load intel/mpi/64/2017/6.256 
-module load intel/mkl/64/2017/6.256 
+module load openmpi/intel-opa/intel-hfi/64/1.10.4
+module load intel/mpi/64/5.1.3/2016.4.258
+module load intel/compiler/64/16.0.4/2016.4.258
+module load intel/mkl/64/11.3.4/2016.4.258
 ```
-Note: the 2016 libraries tried in a [previous approach](./compiling_aims.md) results in a compilation error "src/external/M_strings/M_strings.f90(8087): error #8798: The construct name in the EXIT statement does not match any DO or BLOCK construct to which the EXIT statement belongs."
-
-The 2017 libraries work fine but we much check if the latest intel compliers ans libraries can be installed on oswald as well.
-
 3. Create an empty `build` directory in the top level of the FHI-aims source code and `cd` into it
 
 3. Create the relevant [cmake file](../code/fhi-aims.cmake)
@@ -31,3 +28,4 @@ The 2017 libraries work fine but we much check if the latest intel compliers ans
 where '6' is the number of cores assigned to compile the code. 
 
 6. An aims binary should be ready as aims__scalapack.mpi.x copy this to a bin folder and use the binary from this location. 
+Note: I've had to redo this process for the new Oswald nodes. The new nodes require the binary to be compiled in the new compute nodes. :face_with_rolling_eyes: Simply ssh compute033 and entre the password to enter the new nodes. 
