@@ -104,27 +104,43 @@ To get the free energy corrected to an order, add the harmonic free energy (the 
 
 <img width="597" alt="free_energy_vs_number_of_samples" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/cc690b98-f7f3-4cda-84fa-569c62730d3e">
 
+Note: if your system has imaginary modes, the free energy cannot be computed within the model Hamiltonian considered in TDEP. The free energy of a system blows up when there are imaginary modes (looks something ridiculous like 0.33594303423E+10 rather than something reasonable like 0.23147290181E-01). This is why I haven't plotted the free energy if $2^1$ in the plot above. It is the first iteration of the sTDEP, which has an imaginary mode. 
 
 # Lineshape
 
-Lineshape is needed to generate cool phonon bandstructures like [this]() and for determining the width of peaks in Raman and IR spectra.   
+Lineshape is needed to generate cool phonon bandstructures like [this](https://github.com/tdep-developers/tdep-tutorials/blob/main/05_lineshape/Figures/T100K_anh_bands_333.png) and for determining the width of peaks in Raman and IR spectra.   
 The `lineshape` program needs four input files: `infile.ucposcar`,`infile.ssposcar`,`infile.forceconstant`, and `infile.forceconstant_thirdorder`. Run the program using:
 ```
-lineshape --highsymmetrypoint GM -qg 3 3 3 --temperature 100 
+mpirun -n 4 lineshape -qg 3 3 3 --temperature 100 
 ```
-This will generate the lineshape at the Gamma point and 100K. 
-
+This will generate the lineshape at the Gamma point and 100K. Use this [script]() to plot the data to get something like the following: 
+<img width="597" alt="lineshape_100K" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/b84a22cb-e29c-4170-a105-d4cc63dd8726">
 
 # Raman 
+With the sTDEP, one can get the peak positions([Phonopy-Spectroscopy](https://github.com/skelton-group/Phonopy-Spectroscopy) style by displacing atoms along Raman active modes and evaluate dielectric tensors) and the peak widths (by evaluating the spectral function at the Gamma point) to generate the Raman tensors. This program requires the `infile.ucposcar`     
 
-
+Displaced structures are made using the following command. This generates the displaced structures along the eigenvectors in `outfile.ucposcar.mode.xxx.plus` and `utfile.ucposcar.mode.xxx.minus` files. Use this [script]() to generate the folders where you will run a DFT single-point calculation to calculate a dielectric tensor. 
+```
+tdep_displace_modes 
+```
+Generate the spectral functions using the following command. This will generate a `outfile.phonon_self_energy.hdf5`
+```
+lineshape --temperature 300 --qdirin 0 0 1
+```
 # IR 
 (TODO) 
+
+# Thermal conductivity 
+(TODO)
 # Other tips
 You can get some information about your crystal structure using the following command. It also prints out information about the Brillouin zone.  
 ```
 crystal_structure_info
 ```
+
+| Program | Required input files |
+| ------- | -------------------- |
+|         |                      | 
 To customize the path of the phonon bandstructure, an `infile.qpoints_dispersion` must be created. Here is an example: 
 ```
 CUSTOM                      ! Bravais lattice type
