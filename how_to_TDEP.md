@@ -46,11 +46,15 @@ gnuplot outfile.dispersion_relations.gnuplot_pdf -p
 
 ## Things to converge  
 ["Converging things is annoying, but what can we do."](https://github.com/tdep-developers/tdep-tutorials/tree/main/01_sampling/convergence)     
-`-na` while generating the canonical configuration. Tip:     
+`-na` while generating the canonical configuration. Tip: (TODO)     
 `-rc2` cutoff for harmonic force constant. Tip: check the `tdep_plot_fc_norms` first. A realspace cutoff is printed in the output. I generally go by this number.         
 `-rc3` cutoff for third order force constant Tip: I usually half the harmonic cutoff here.       
-r^2   
-overdetermination ratio         
+r^2     
+<img width="597" alt="Screenshot 2023-10-25 at 12 04 52" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/45ca346b-eb02-4ac8-a8ae-fecfc2346147">
+
+overdetermination ratio. I don't fully understand this number yet, but here is how it varies with the number of iterations. In the tutorial, it recommended that this number be "in the 100s". Note: if you extract `-rc3` then there is an overdetermination ratio for this also. Here, I plot it for 2nd order.     
+<img width="597" alt="Screenshot 2023-10-25 at 10 55 11" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/036fdf00-8719-4470-adb6-82945fdc7350">
+
 number of samples & iterations        
 
 ## Makefile 
@@ -113,7 +117,7 @@ The `lineshape` program needs four input files: `infile.ucposcar`,`infile.ssposc
 ```
 mpirun -n 4 lineshape -qg 3 3 3 --temperature 100 
 ```
-This will generate the lineshape at the Gamma point and 100K. Use this [script]() to plot the data to get something like the following: 
+This will generate the lineshape at the Gamma point and 100K. Use this [script]() to plot the data to get something like the following. (These are results from an RP phase at 100K. Note the nice imaginary modes 😄)
 <img width="597" alt="lineshape_100K" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/b84a22cb-e29c-4170-a105-d4cc63dd8726">
 
 # Raman 
@@ -123,7 +127,7 @@ Displaced structures are made using the following command. This generates the di
 ```
 tdep_displace_modes 
 ```
-Generate the spectral functions using the following command. This will generate a `outfile.phonon_self_energy.hdf5`
+Generate the spectral functions using the following command. This will generate an `outfile.phonon_self_energy.hdf5`
 ```
 lineshape --temperature 300 --qdirin 0 0 1
 ```
@@ -162,5 +166,9 @@ To evaluate the phonon frequencies at these points, use the `-rp` tag. It stands
 ```
 phonon_dispersion_relations -rp -p --dos
 ```
-Anharmoncity measure (TODO)
+# Anharmonicity measure
+The [anharmonicity measure]()
+
+<img width="597" alt="anharmonicity_measure_vs_temp" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/6c41db73-08c5-45a5-92a7-441c0c6c79e9">
+
 
