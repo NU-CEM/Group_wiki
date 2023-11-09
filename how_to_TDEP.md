@@ -113,9 +113,9 @@ Note: if your system has imaginary modes, the free energy cannot be computed wit
 # Lineshape
 
 Lineshape is needed to generate cool phonon bandstructures like [this](https://github.com/tdep-developers/tdep-tutorials/blob/main/05_lineshape/Figures/T100K_anh_bands_333.png) and for determining the width of peaks in Raman and IR spectra.   
-The `lineshape` program needs four input files: `infile.ucposcar`,`infile.ssposcar`,`infile.forceconstant`, and `infile.forceconstant_thirdorder`. Run the program using:
+The `lineshape` program needs four input files: `infile.ucposcar`,`infile.ssposcar`,`infile.forceconstant`, and `infile.forceconstant_thirdorder`. Run the program using the following command. If you use the `--readpath` tag for a custom path, the an `infile.qpoints_dispersion` is also required. 
 ```
-mpirun -n 4 lineshape -qg 3 3 3 --temperature 100 
+mpirun -n 4 lineshape --readpath --path -qg 3 3 3 --temperature 100 
 ```
 This will generate the lineshape at the Gamma point and 100K. Use this [script]() to plot the data to get something like the following. (These are results from an RP phase at 100K. Note the nice imaginary modes 😄)
 <img width="597" alt="lineshape_100K" src="https://github.com/NU-CEM/Group_wiki/assets/49740967/b84a22cb-e29c-4170-a105-d4cc63dd8726">
