@@ -12,8 +12,7 @@ git clone https://github.com/tdep-developers/tdep.git
 cp important_settings.conda important_settings
 ``` 
 
-3. Then I had to point to the conda installation by chaning the `PREFIX=/home/e05/e05/prakaya/miniconda3/envs/tdep` and change the `FCFLAGS="-ffree-line-length-none -std=f2008 -cpp -Wno-argument-mismatch"`:
-
+3. Then I had to point to the conda installation by changing the `PREFIX=/home/e05/e05/prakaya/miniconda3/envs/tdep`.
 4. Then to build:
 ```
 ./build_things.sh --nthreads_make 4
@@ -33,4 +32,4 @@ pip install https://github.com/flokno/tools.tdep/archive/main.zip
 ```
 
 
-Note: for some apple silicon devices a `FCFLAGS_EXTRA="-L/Library/Developer/CommandLineTools//SDKs/MacOSX13.3.sdk/usr/lib/"` is needed. For my own laptop, I didn't need it. 🤔 More information (here)[https://github.com/tdep-developers/tdep/blob/main/INSTALL.md#Anaconda]
+Note: for some Apple silicon devices a `FCFLAGS_EXTRA="-L/Library/Developer/CommandLineTools//SDKs/MacOSX13.3.sdk/usr/lib/"` is needed. For my own laptop, I didn't need it. 🤔 More information (here)[https://github.com/tdep-developers/tdep/blob/main/INSTALL.md#Anaconda]
