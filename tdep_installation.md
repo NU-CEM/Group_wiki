@@ -33,7 +33,7 @@ pip install https://github.com/flokno/tools.tdep/archive/main.zip
 
 
 Notes: 
-1. For some Apple silicon devices a `FCFLAGS_EXTRA="-L/Library/Developer/CommandLineTools//SDKs/MacOSX13.3.sdk/usr/lib/"` is needed. For my own laptop, I didn't need it. 🤔 More information (here)[https://github.com/tdep-developers/tdep/blob/main/INSTALL.md#Anaconda]
+1. For some Apple silicon devices a `FCFLAGS_EXTRA="-L/Library/Developer/CommandLineTools//SDKs/MacOSX13.3.sdk/usr/lib/"` is needed. For my own laptop, I didn't need it. 🤔 More information [here](https://github.com/tdep-developers/tdep/blob/main/INSTALL.md#Anaconda)
 2. On Young, I also got the following warning:
 ```
 WARNING: There was an error initializing an OpenFabrics device.
