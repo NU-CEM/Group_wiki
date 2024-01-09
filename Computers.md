@@ -9,10 +9,20 @@
 | Nodes    | 5,860 nodes: 5,276 standard memory, 584 high memory|
 |----------|----------------------------------------------------|
 | Procs    | 2× AMD EPYCTM 7742, 2.25 GHz, 64-core|
-| Memory   |  256 GiB (standard memory), 512 GiB (high memory)|
+| Memory   |  256 GB (standard memory), 512 GiB (high memory)|
 | Cores per node | 128 (2× 64-core processors)|
 
 More details on hardware can be found [here](https://www.archer2.ac.uk/about/hardware.html)
+
+## Young (National supercomputer at UCL)
+| Nodes    | 582 nodes: 576 standard memory, 6 high memory|
+|----------|----------------------------------------------------|
+| Procs    | x86 Xenon Cascade Lake|
+| Memory   |  192 GB (standard memory), 3x1.5 TB (high memory), 3x2TB (high memory) |
+| Cores per node | 40 (2× 64-core processors)|
+
+More info can be found [here](https://www.rc.ucl.ac.uk/docs/Clusters/Young/)
+
 ## Northumbria servers
 
 - To access computers on the Northumbria network (Oswald or Dade) from home you will also need to request a login on Garrett (again by raising a ticket with IT) and ssh in via Garrett. The SSH setup is a little finicky (via a Proxy command) - the ssh config files that work for Lucy (stored as `~.ssh/config`) are [here](https://github.com/lucydot/ssh_config/blob/main/config)
