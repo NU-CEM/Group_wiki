@@ -6,5 +6,6 @@ conda update -n base -c defaults conda
 conda create -n nep python=3.11
 conda activate nep
 conda install cuda -c nvidia
+conda install pip
 pip install calorine hiphive phonopy
 ```
