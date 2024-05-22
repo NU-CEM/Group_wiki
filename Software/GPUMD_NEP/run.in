@@ -1,0 +1,9 @@
+potential   /home/mmm1350/NEP_RP_phases_gen2/model/nepmodel_full/nep.txt
+velocity    1
+
+time_step   1
+
+ensemble    npt_scr 1 1200 100 0 0 0 0 0 0 100 100 100 100 100 100 1000
+dump_exyz   10000 1 1 1
+dump_thermo 10000
+run         50000000
