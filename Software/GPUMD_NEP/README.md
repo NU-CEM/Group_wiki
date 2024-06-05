@@ -11,3 +11,9 @@ Following is the meaning of all the lines in the `run.in` file:
 5. `dump_exyz` - `100000 1 1 1` dumps extended xyz every 10000 steps (useful for visualization)
 6. `dump_thermo` - `100000` dumps thermo file every 1000 steps (all useful thermodynamic quantities are here)
 7. `run` - (units of fs) `50000000` (this is 50 ns) 
+
+## Creating `.xyz` files for MD simulations
+
+- Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
+- Run the Python script to generate a supercell of the desired size and export as a `.xyz`.
+- Sample conventional file and the resulting `.xyz` are provided.
