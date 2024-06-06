@@ -32,6 +32,6 @@ NEP requires formation energies which are not automatically printed in the outfi
 - Calorine has functionality for extracting total energies and forces from NEP model
 - this does not need GPU to run, it can be run on e.g. young head nodes.
 - See the calorine tutorials on how to get energies and forces.
-- You will need to install Calorine and ASE on whichever computer you are using.
+- You will need to install Calorine and ASE on whichever computer you are using, see [here](./setup_Young.md) for guidance how to install required dependancies via conda and pip.
 
 
