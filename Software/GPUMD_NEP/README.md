@@ -17,3 +17,8 @@ Following is the meaning of all the lines in the `run.in` file:
 - Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
 - Run [the Python script](`write_xyz.py`) to generate a supercell of the desired size and export as a `.xyz`.
 - [Sample conventional file](./BaZrS3_conventional.in) and the [resulting file](./model.xyz) in `.xyz` formatare provided.
+
+## To add
+
+- DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
+- Guidelines on ensuring the k-point density is consistent
