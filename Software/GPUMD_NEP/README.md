@@ -20,9 +20,9 @@ Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used t
 
 - See the Calorine tutorial [here](https://calorine.materialsmodeling.org/tutorials/generate_training_structures_and_training.html)
 - Start with structures downloaded from Materials Project, for example. As tutorial highlights, create strained, deformed and rattled versions. Include rattles of supercells also.
-- For training with fhi-aims, export these as `geometry_n.in` files where `n` is a number to distinguish each structure.
-- Use bash to create directories `calculation_n` corresponding to each structure
-- Create a fhi-vibes input file
+- For training with fhi-aims, these will be exported as `geometry.in-n` files where `n` is a number to distinguish each structure. There is an example script for these last two steps.
+- Create a fhi-vibes input file (see example) and slurm submission script (see example)
+- Use the python script make_folders to create directories `calculation_n` corresponding to each structure, transfer across the required files (submit, fhi-vibes aims.in, geometry.in), and submit
 - Submit each calculation to the supercomputer (currently this is done on a calculation-by-calculation basis)
 - Transfer calculations across to the GPU(s) you are using for NEP model training
 - Once complete, use the bash file to convert each output total energy to a formation energy
