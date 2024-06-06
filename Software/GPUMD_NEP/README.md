@@ -1,4 +1,26 @@
-# Heating/Cooling runs
+# GPUMD and Calorine tutorial
+
+GPUMD can be used to build Neuro Evolution Potential (NEP) models, and run MD using the resulting NEP model. This is, as the name suggests, ran on GPUs.
+
+Calorine is used to extract energies and forces from the NEP model. This can be run on CPUs.
+
+Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used to handle the jobs submission.
+
+# To add to tutorial
+
+- [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
+- [ ] Guidelines on ensuring the k-point density is consistent
+- [ ] FHI-vibes setup using conda
+
+# Molecular Dynamics
+
+## Creating `.xyz` files for MD simulations
+
+- Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
+- Run [the Python script](`write_xyz.py`) to generate a supercell of the desired size and export as a `.xyz`.
+- [Sample conventional file](./BaZrS3_conventional.in) and the [resulting file](./model.xyz) in `.xyz` formatare provided.
+
+## Running heating and cooling runs with GPUMD.
 
 To run molecular dynamics, use the [run.in](https://github.com/NU-CEM/Group_wiki/blob/main/Software/GPUMD_NEP/run.in) file, the [submit_GPUMD](https://github.com/NU-CEM/Group_wiki/blob/main/Software/GPUMD_NEP/submit_script_gpumd.sh) file and specify the geometry using an extended xyz file (`.exyz`). 
 It assumes that the `gpumd` binary is in the same folder.
@@ -12,22 +34,15 @@ Following is the meaning of all the lines in the `run.in` file:
 6. `dump_thermo` - `100000` dumps thermo file every 1000 steps (all useful thermodynamic quantities are here)
 7. `run` - (units of fs) `50000000` (this is 50 ns) 
 
-## Creating `.xyz` files for MD simulations
+# Training a NEP model with FHI-aims 
 
-- Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
-- Run [the Python script](`write_xyz.py`) to generate a supercell of the desired size and export as a `.xyz`.
-- [Sample conventional file](./BaZrS3_conventional.in) and the [resulting file](./model.xyz) in `.xyz` formatare provided.
-
-## To add
-
-- [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
-- [ ] Guidelines on ensuring the k-point density is consistent
-
-## FHI-aims total energies for training a NEP model, and comparison with NEP output
+## FHI-aims total energies for training a NEP model (or comparing against a NEP prediction)
 
 NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. Oh yes, it only for Ba-Zr-S. This is open source software, baby.
 
-## Calculating total energies and forces using an existing NEP model
+# Calorine for extracting predictions from a NEP model
+
+## Predicting total energies and forces
 
 - Calorine has functionality for extracting total energies and forces from NEP model
 - this does not need GPU to run, it can be run on e.g. young head nodes.
