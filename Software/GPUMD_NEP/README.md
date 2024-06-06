@@ -25,7 +25,7 @@ Following is the meaning of all the lines in the `run.in` file:
 
 ## FHI-aims total energies for training a NEP model, and comparison with NEP output
 
-NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. This is open source software, baby.
+NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. Oh yes, it only for Ba-Zr-S. This is open source software, baby.
 
 ## Calculating total energies and forces using an existing NEP model
 
