@@ -20,7 +20,7 @@ Ba:                            light
 Zr:                            light
 S:                             light
 
-
+##!!! please change these if you're not Prakriti !!!
 [machine]
 basissetloc =      /work/e05/e05/prakaya/chalcogenide_perovskites/species_defaults/defaults_2020
 aims_command =     /work/e05/e05/prakaya/chalcogenide_perovskites/run_aims.sh
