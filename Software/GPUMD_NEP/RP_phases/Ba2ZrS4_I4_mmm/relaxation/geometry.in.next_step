@@ -1,0 +1,21 @@
+#=======================================================
+# FHI-aims file: /mnt/lustre/a2fs-work2/work/e05/e05/prakaya/chalcogenide_perovskites/redo/ternary/Ba2ZrS4_I4_mmm_light/relaxation/geometry.in.next_step
+# Created using the Atomic Simulation Environment (ASE)
+# Fri Mar 15 09:18:52 2024
+
+# Additional information:
+#  Relaxed with BFGS, fmax=1.000 meV/AA
+#  nsteps = 9
+#  residual force  = 0.274316 meV/AA
+#  residual stress = 0.675106 meV/AA
+#=======================================================
+lattice_vector -2.4671949669630000 2.4671949669630000 7.8104643905569997 
+lattice_vector 2.4671949669630000 -2.4671949669630000 7.8104643905569997 
+lattice_vector 2.4671949669630000 2.4671949669630000 -7.8104643905569997 
+atom_frac 0.6415875971329998 0.6415875971330000 0.0000000000000001 Ba
+atom_frac 0.3584124028669999 0.3584124028670000 0.0000000000000000 Ba
+atom_frac 0.4999999999999999 -0.0000000000000000 0.5000000000000000 S
+atom_frac 0.0000000000000000 0.5000000000000001 0.5000000000000001 S
+atom_frac 0.8360880679109998 0.8360880679110001 0.0000000000000001 S
+atom_frac 0.1639119320890000 0.1639119320890000 0.0000000000000000 S
+atom_frac 0.0000000000000000 -0.0000000000000000 0.0000000000000000 Zr

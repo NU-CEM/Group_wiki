@@ -1,0 +1,196 @@
+[vibes.run]    run relaxation workflow with settings from relaxation.in
+
+[relaxation]   ** /mnt/lustre/a2fs-work2/work/e05/e05/prakaya/chalcogenide_perovskites/redo/ternary/Ba4Zr3S10_I4_mmm_light/relaxation/trajectory.son does not exist, nothing to prepare
+[calculator]   Update aims k_grid with kpt density of 5 to [8, 8, 10]
+[calculator]   .. add `sc_accuracy_rho: 1e-06` to parameters (default)
+[calculator]   .. add `relativistic: atomic_zora scalar` to parameters (default)
+[calculator]   .. add `output_level: MD_light` to parameters (default)
+[calculator]   Add basisset `light` for atom `Ba` to basissets folder.
+[calculator]   Add basisset `light` for atom `S` to basissets folder.
+[calculator]   Add basisset `light` for atom `Zr` to basissets folder.
+[calculator]   Calculator: aims
+[calculator]   settings:
+[calculator]     xc: pbesol
+[calculator]     k_grid: [8, 8, 10]
+[calculator]     sc_accuracy_rho: 1e-06
+[calculator]     relativistic: atomic_zora scalar
+[calculator]     output_level: MD_light
+[calculator]     compute_forces: True
+[calculator]     compute_analytical_stress: True
+[calculator]     aims_command: /work/e05/e05/prakaya/chalcogenide_perovskites/run_aims.sh
+[calculator]     species_dir: /mnt/lustre/a2fs-work2/work/e05/e05/prakaya/chalcogenide_perovskites/redo/ternary/Ba4Zr3S10_I4_mmm_light/relaxation/basissets
+[relaxation]   filter settings:
+[relaxation]     hydrostatic_strain: False
+[relaxation]     constant_volume: False
+[relaxation]     scalar_pressure: 0.0
+[relaxation]     mask: None
+[relaxation]   driver: BFGS
+[relaxation]   settings:
+[relaxation]     type: optimization
+[relaxation]     optimizer: BFGS
+[relaxation]     maxstep: 0.2
+[socketio]     Socketio not used with calculator aims
+[relaxation]   filter settings:
+[relaxation]     hydrostatic_strain: False
+[relaxation]     constant_volume: False
+[relaxation]     scalar_pressure: 0.0
+[relaxation]     mask: None
+[relaxation]   Start step 0
+[relaxation]   Step 0 finished.
+[relaxation]   .. residual force:  181.585 meV/AA
+[relaxation]   .. residual stress: 8544.566 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 1 finished.
+[relaxation]   .. residual force:  3435.832 meV/AA
+[relaxation]   .. residual stress: 91193.779 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 2 finished.
+[relaxation]   .. residual force:  49.498 meV/AA
+[relaxation]   .. residual stress: 3798.818 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 3 finished.
+[relaxation]   .. residual force:  295.700 meV/AA
+[relaxation]   .. residual stress: 3231.077 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 4 finished.
+[relaxation]   .. residual force:  83.174 meV/AA
+[relaxation]   .. residual stress: 274.874 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 5 finished.
+[relaxation]   .. residual force:  71.693 meV/AA
+[relaxation]   .. residual stress: 15.208 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 6 finished.
+[relaxation]   .. residual force:  47.647 meV/AA
+[relaxation]   .. residual stress: 119.906 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 7 finished.
+[relaxation]   .. residual force:  26.985 meV/AA
+[relaxation]   .. residual stress: 129.446 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 8 finished.
+[relaxation]   .. residual force:  30.588 meV/AA
+[relaxation]   .. residual stress: 51.970 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 9 finished.
+[relaxation]   .. residual force:  23.429 meV/AA
+[relaxation]   .. residual stress: 20.313 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 10 finished.
+[relaxation]   .. residual force:  10.513 meV/AA
+[relaxation]   .. residual stress: 47.608 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 11 finished.
+[relaxation]   .. residual force:  8.188 meV/AA
+[relaxation]   .. residual stress: 30.107 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 12 finished.
+[relaxation]   .. residual force:  8.396 meV/AA
+[relaxation]   .. residual stress: 4.854 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 13 finished.
+[relaxation]   .. residual force:  7.528 meV/AA
+[relaxation]   .. residual stress: 13.657 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 14 finished.
+[relaxation]   .. residual force:  5.630 meV/AA
+[relaxation]   .. residual stress: 23.243 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 15 finished.
+[relaxation]   .. residual force:  5.850 meV/AA
+[relaxation]   .. residual stress: 17.773 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 16 finished.
+[relaxation]   .. residual force:  6.191 meV/AA
+[relaxation]   .. residual stress: 4.575 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 17 finished.
+[relaxation]   .. residual force:  4.351 meV/AA
+[relaxation]   .. residual stress: 6.113 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 18 finished.
+[relaxation]   .. residual force:  1.772 meV/AA
+[relaxation]   .. residual stress: 8.690 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 19 finished.
+[relaxation]   .. residual force:  1.459 meV/AA
+[relaxation]   .. residual stress: 4.771 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 20 finished.
+[relaxation]   .. residual force:  1.536 meV/AA
+[relaxation]   .. residual stress: 0.439 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 21 finished.
+[relaxation]   .. residual force:  1.587 meV/AA
+[relaxation]   .. residual stress: 5.755 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 22 finished.
+[relaxation]   .. residual force:  1.575 meV/AA
+[relaxation]   .. residual stress: 10.280 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 23 finished.
+[relaxation]   .. residual force:  0.947 meV/AA
+[relaxation]   .. residual stress: 9.637 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 24 finished.
+[relaxation]   .. residual force:  0.268 meV/AA
+[relaxation]   .. residual stress: 4.155 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 25 finished.
+[relaxation]   .. residual force:  0.080 meV/AA
+[relaxation]   .. residual stress: 0.660 meV/AA**3
+[vibes]        .. Space group:     I4/mmm (139)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Relaxation converged.
+[relaxation]   done.
