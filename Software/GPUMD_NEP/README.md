@@ -22,3 +22,16 @@ Following is the meaning of all the lines in the `run.in` file:
 
 - [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
 - [ ] Guidelines on ensuring the k-point density is consistent
+
+## FHI-aims total energies for training a NEP model, and comparison with NEP output
+
+NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. This is open source software, baby.
+
+## Calculating total energies and forces using an existing NEP model
+
+- Calorine has functionality for extracting total energies and forces from NEP model
+- this does not need GPU to run, it can be run on e.g. young head nodes.
+- See the calorine tutorials on how to get energies and forces.
+- You will need to install Calorine and ASE on whichever computer you are using, see [here](./setup_Young.md) for guidance how to install required dependancies via conda and pip.
+
+
