@@ -1,0 +1,29 @@
+[files]
+geometry:                      geometry.in
+
+[calculator]
+name:                          aims
+socketio:                      true
+
+[calculator.parameters]
+xc:                            pbesol
+compute_forces:                true
+sc_accuracy_stress:            1e-4
+compute_analytical_stress:     .true.
+
+[calculator.kpoints]
+density:                       5
+
+[calculator.basissets]
+Ba:                            light
+Zr:                            light
+S:                             light
+
+
+[machine]
+basissetloc =      /work/e05/e05/prakaya/chalcogenide_perovskites/species_defaults/defaults_2020
+aims_command =     /work/e05/e05/prakaya/chalcogenide_perovskites/run_aims.sh
+
+
+[restart]
+command = sbatch submit.sh
