@@ -6,6 +6,10 @@ Calorine is used to extract energies and forces from the NEP model. This can be 
 
 Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used to handle the jobs submission.
 
+# LW to test
+
+- [ ] Run n=6 NEP energy prediction and compare to DFT output
+
 # To add to tutorial
 
 - [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
@@ -38,7 +42,7 @@ Following is the meaning of all the lines in the `run.in` file:
 
 ## FHI-aims total energies for training a NEP model (or comparing against a NEP prediction)
 
-NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. Oh yes, it only for Ba-Zr-S. This is open source software, baby.
+NEP requires formation energies which are not automatically printed in the outfiles for fhi-aims. To convert from total energy to formation energy there is a script. CAUTION this is a hacky script which will overwrite your outfile, so use it on a copy!! This only works with ASE prior to June 2024. Oh yes, it only for Ba-Zr-S and it is specific to the calculation settings (xc functional etc). This is open source software, baby. The values for each atom have been grepped from 
 
 # Calorine for extracting predictions from a NEP model
 
@@ -49,5 +53,5 @@ NEP requires formation energies which are not automatically printed in the outfi
 - See the calorine tutorials on how to get energies and forces.
 - You will need to install Calorine and ASE on whichever computer you are using, see [here](./setup_Young.md) for guidance how to install required dependancies via conda and pip.
 - You will need the NEP model and the geometry you want to predict energies for.
-
+- Take the NEP output and divide by number of atoms for comparison against the FHI-aims energy.
 
