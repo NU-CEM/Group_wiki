@@ -1,4 +1,5 @@
 from ase.io import read
+from calorine.calculators import CPUNEP
 
 structure = read('geometry.in')
 calc = CPUNEP('nep.txt')
