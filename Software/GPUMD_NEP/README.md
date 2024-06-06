@@ -33,5 +33,6 @@ NEP requires formation energies which are not automatically printed in the outfi
 - this does not need GPU to run, it can be run on e.g. young head nodes.
 - See the calorine tutorials on how to get energies and forces.
 - You will need to install Calorine and ASE on whichever computer you are using, see [here](./setup_Young.md) for guidance how to install required dependancies via conda and pip.
+- You will need the NEP model and the geometry you want to predict energies for.
 
 
