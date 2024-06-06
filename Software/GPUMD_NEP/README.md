@@ -20,5 +20,5 @@ Following is the meaning of all the lines in the `run.in` file:
 
 ## To add
 
-- DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
-- Guidelines on ensuring the k-point density is consistent
+- [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
+- [ ] Guidelines on ensuring the k-point density is consistent
