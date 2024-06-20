@@ -60,4 +60,4 @@ print('Number of training structures:', len(training_structures))
 count = 0
 for atoms in training_structures:
     count = count + 1
-    ase.io.write(f'geometry.in-{count}', atoms, scaled=True, format = 'aims')
+    ase.io.write(f'geometry.in-{count:03d}', atoms, scaled=True, format = 'aims')
