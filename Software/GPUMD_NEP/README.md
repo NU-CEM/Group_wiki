@@ -6,7 +6,7 @@ Calorine is used to extract energies and forces from the NEP model. This can be 
 
 Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used to handle the jobs submission.
 
-# LW to test
+# To test
 
 - [ ] Run n=6 NEP energy prediction and compare to DFT output
 
