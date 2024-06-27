@@ -13,7 +13,6 @@ Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used t
 # To add to tutorial
 
 - [ ] DFT input files for geometry relaxations and total energy single-point calculations (HSE06 and pbesol)
-- [ ] Guidelines on ensuring the k-point density is consistent
 - [ ] FHI-vibes setup using conda
 
 # Training a NEP model with FHI-aims 
@@ -22,6 +21,7 @@ Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used t
 - Start with structures downloaded from Materials Project, for example. As tutorial highlights, create strained, deformed and rattled versions. Include rattles of supercells also.
 - For training with fhi-aims, these will be exported as `geometry.in-n` files where `n` is a number to distinguish each structure. There is an example script for these last two steps.
 - Create a fhi-vibes input file (see example) and slurm submission script (see example)
+- It is important that numerical parameters are consistent across all calculations. This means that k-point sampling should be consistent. To ensure this, set the k-point density (rather than the number of k-points) consistently. In fhi-vibes this is the `density` tag within `calculator.kpoints`. In fhi-aims directly it is `k_density`.
 - Use the python script make_folders to create directories `calculation_n` corresponding to each structure, transfer across the required files (submit, fhi-vibes aims.in, geometry.in), and submit
 - Submit each calculation to the supercomputer (currently this is done on a calculation-by-calculation basis)
 - Transfer calculations across to the GPU(s) you are using for NEP model training
