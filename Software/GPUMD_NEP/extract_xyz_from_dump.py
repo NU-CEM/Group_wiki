@@ -10,23 +10,24 @@ def create_split_files():
         os.chdir('temp_%04d'%temps)
         lines = open('dump.xyz').readlines()
         random_numbers = random.sample(range(500, 1000), 2)
-        count = 1
+        structure_count = 1
         for i,line in enumerate(lines):
             if len(line.split())== 1:
-                count = count +1
-                if count in random_numbers:
+                if structure_count in random_numbers:
+                    print("extracting structure")
                     number_of_atoms = int(line)
-                    for iters in range(number_of_atoms+2):
-                        with open('structure_%04d.xyz'%count,'a+') as split_xyz:
-                            split_xyz.write(lines[iters].strip())
+                    for atom_count in range(number_of_atoms+2):
+                        with open('structure_%04d.xyz'%structure_count,'a+') as split_xyz:
+                            split_xyz.write(lines[i+atom_count].strip())
                             split_xyz.write('\n')
-                    structure = ase.io.read("structure_%04d.xyz"%count)
+                    structure = ase.io.read("structure_%04d.xyz"%structure_count)
                     ase.io.write('geometry.in',structure,format='aims',scaled=True)
-                    os.system('cp geometry.in /home/mmm0117/NEP_ZrS2_v1/MD_sample_structures/geometry.in-%03d'%file_count)
+                    os.system('cp geometry.in /home/mmm0117/NEP_ZrS2_v1/MD_sample_structures_2/geometry.in-%03d'%file_count)
                     file_count += 1
+                structure_count+=1
                     
         print('temperature %04d completed'%temps)
         os.chdir('../')
 
 create_split_files()
-    
+       
