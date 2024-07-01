@@ -14,7 +14,7 @@ def create_split_files():
         for i,line in enumerate(lines):
             if len(line.split())== 1:
                 count = count +1
-                if count is in random_number:
+                if count in random_number:
                     number_of_atoms = int(line)
                     for iters in range(number_of_atoms+2):
                         with open('structure_%04d.xyz'%count,'a+') as split_xyz:
