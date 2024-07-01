@@ -51,6 +51,12 @@ NEP requires formation energies which are not automatically printed in the outfi
 - Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
 - Run [the Python script](`write_xyz.py`) to generate a supercell of the desired size and export as a `.xyz`.
 - [Sample conventional file](./BaZrS3_conventional.in) and the [resulting file](./model.xyz) in `.xyz` formatare provided.
+- 
+
+## Running fixed temperature runs
+
+- This is useful for generating geometries for NEP training data. In this case you would use your first iteration NEP model to run `NVT` GPUMD simulations. See run_NVT.in. You run a MD simulation for each temperature of interest, for example 0-1500K with 50 Kelvin jumps.
+- You then extract a random geometry from the thermalised system (containted in the `dump.xyz` output file) using extract_xyz_from_dump.py.
 
 ## Running heating and cooling runs with GPUMD.
 
