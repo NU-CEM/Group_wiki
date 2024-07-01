@@ -9,6 +9,7 @@ Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used t
 # To test
 
 - [ ] Run n=6 NEP energy prediction and compare to DFT output
+- [ ] Try training NEP without doing the formation energy calculation step (as this awkward to generalise).
 
 # To add to tutorial
 
