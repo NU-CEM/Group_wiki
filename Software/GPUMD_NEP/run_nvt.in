@@ -1,0 +1,8 @@
+potential   /home/mmm0117/NEP_ZrS2_v1/model/nepmodel_full/nep.txt
+velocity    10
+time_step   1
+
+ensemble    nvt_ber 10 10 100
+dump_exyz   100 0 0
+dump_thermo 100
+run         100000
