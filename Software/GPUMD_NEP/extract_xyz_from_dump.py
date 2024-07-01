@@ -9,12 +9,12 @@ def create_split_files():
     for temps in temperatures:
         os.chdir('temp_%04d'%temps)
         lines = open('dump.xyz').readlines()
-        random_number = random.randint(500,1000)
+        random_numbers = random.sample(range(500, 1000), 2)
         count = 1
         for i,line in enumerate(lines):
             if len(line.split())== 1:
                 count = count +1
-                if count == random_number:
+                if count is in random_number:
                     number_of_atoms = int(line)
                     for iters in range(number_of_atoms+2):
                         with open('structure_%04d.xyz'%count,'a+') as split_xyz:
@@ -24,7 +24,7 @@ def create_split_files():
                     ase.io.write('geometry.in',structure,format='aims',scaled=True)
                     os.system('cp geometry.in /home/mmm0117/NEP_ZrS2_v1/MD_sample_structures/geometry.in-%03d'%file_count)
                     file_count += 1
-                    break
+                    
         print('temperature %04d completed'%temps)
         os.chdir('../')
 
