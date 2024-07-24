@@ -10,6 +10,7 @@ Furthermore, for building the NEP model using FHI-aims data, FHI-vibes is used t
 
 - [ ] Run n=6 NEP energy prediction and compare to DFT output
 - [ ] Try training NEP without doing the formation energy calculation step (as this awkward to generalise).
+- [ ] Generate models with different sets of training data: cubic perovskite cell only, cubic+orthorhombic only, cubic+orthorhombic+tetragonal. Compare the MD structures generated. Does the model miss the tetragonal phase when no training data is supplied for this?
 
 # To add to tutorial
 
@@ -52,12 +53,12 @@ NEP requires formation energies which are not automatically printed in the outfi
 - Make sure every geometry file in a conventional unit cell -- which means it should have orthogonal lattice vectors otherwise you tend to model weird cells.
 - Run [the Python script](`write_xyz.py`) to generate a supercell of the desired size and export as a `.xyz`.
 - [Sample conventional file](./BaZrS3_conventional.in) and the [resulting file](./model.xyz) in `.xyz` formatare provided.
-- 
 
 ## Running fixed temperature runs
 
-- This is useful for generating geometries for NEP training data. In this case you would use your first iteration NEP model to run `NVT` GPUMD simulations. See run_NVT.in. You run a MD simulation for each temperature of interest, for example 0-1500K with 50 Kelvin jumps.
+- This is useful for generating geometries for NEP training data. In this case you would use your first iteration NEP model to run `NVT` GPUMD simulations. See run_NVT.in. You run a MD simulation at each temperature of interest, spanning a temperature range. For example 0-1500K with 50 Kelvin jumps, giving 30 MD simulations in total.
 - You then extract a random geometry from the thermalised system (containted in the `dump.xyz` output file) using extract_xyz_from_dump.py.
+- As you will be using the resulting structures as input to a DFT calculation, your cell size does not want to be too large, typically around 500 atoms.
 
 ## Running heating and cooling runs with GPUMD.
 
