@@ -1,0 +1,1 @@
+This specifies the basic software setup for a range quantum chemical simulations; this is ideal for project students who are getting started in the field. It is Python-based although C and additional setup step is required for GPAW (https://gpaw.readthedocs.io/install.html). Note also there are tests for validating the GPAW install.
